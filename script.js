@@ -50,3 +50,18 @@ function typeWriter() {
 }
 
 typeWriter();
+
+const btnDownloadCV = document.querySelector("#btn__download__cv");
+
+btnDownloadCV.addEventListener("click", () => {
+  const link = document.createElement("a");
+  link.href =
+    "https://f004.backblazeb2.com/file/Meus-Arquivos/curriculo/curriculo-atualizado.pdf";
+  link.target = "_blank";
+
+  link.download = "Lucas_Sousa_da_Silva.pdf";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});

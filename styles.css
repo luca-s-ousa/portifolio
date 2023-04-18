@@ -165,15 +165,43 @@ body {
 }
 
 #about__me__text__area {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   max-width: 50%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-#about__me__container
-  #about__me__content
-  #about__me__text__area
-  span#presentation {
-  text-align: justify;
+#my__data__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#presentation {
+  display: block;
+  /* border: 1px solid blue; */
+}
+
+#my__data__content .my__data__area .label__my__data {
+  font-weight: 500;
+}
+
+#btn__download__cv {
+  all: unset;
+  cursor: pointer;
+  background-color: var(--second-color);
+  color: var(--primary-color);
+
+  text-transform: uppercase;
+  padding: 0.65rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0px 0px 3px 1.5px var(--second-color);
 }
 
 @media (max-width: 600px) {
