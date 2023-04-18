@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary-color: #252525;
+  --font-primary-color: #e8d9d9;
+  --second-color: #c8c828;
+  --second-color-transparent: #c8c828ac;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--font-primary-color);
+  font-family: "Roboto", sans-serif;
+  /* border: 1px solid red; */
+}
+
+.hidden {
+  display: none;
+}
+
+.header__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.header__container .line__title {
+  border: 1.95px solid var(--second-color);
+  border-radius: 10px;
+  width: 30%;
+}
+
+#container__main {
+  width: 1110px;
+  /* border: 1px solid red; */
+}
+
+#navbar__container {
+  height: 50px;
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.7rem;
+  border-bottom: 1px solid var(--second-color);
+}
+
+#navbar__container h2 {
+  color: var(--second-color);
+}
+
+#navbar__container a {
+  text-decoration: none;
+  color: var(--font-primary-color);
+  font-size: 0.9rem;
+}
+
+.navbar__content {
+  display: flex;
+  /* border: 1px solid yellow; */
+  /* max-width: 55%; */
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.show__button {
+  display: inline;
+}
+
+.hidden__button {
+  display: none;
+}
+
+.btn__menu__navbar {
+  display: none;
+}
+
+.btn__closed__menu {
+  display: none;
+}
+
+#start__container {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#start__container #greeting__text {
+  display: block;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--font-primary-color);
+}
+
+#animation__area {
+  display: block;
+  color: var(--font-primary-color);
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#animation__area strong {
+  color: var(--second-color);
+}
+
+#social__media__container {
+  margin-top: 0.7rem;
+  display: flex;
+  gap: 15px;
+}
+
+#social__media__container a {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  border: 1px solid var(--font-primary-color);
+  border-radius: 50%;
+}
+
+#social__media__container img {
+  /* border-radius: 50%; */
+  width: 15px;
+}
+
+#about__me__container {
+  /* border: 1px solid red; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#about__me__container h1 {
+  color: var(--font-primary-color);
+}
+
+#about__me__content {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+#about__me__content img {
+  width: 200px;
+  height: 340px;
+  padding: 0.5rem;
+  border: 2.5px solid var(--second-color);
+  border-radius: 2px;
+}
+
+#about__me__text__area {
+  border: 1px solid red;
+  max-width: 50%;
+}
+
+#about__me__container
+  #about__me__content
+  #about__me__text__area
+  span#presentation {
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .btn__menu__navbar {
+    all: unset;
+    display: inline;
+  }
+
+  .navbar__content {
+    display: none;
+  }
+
+  .menu__mobile {
+    border: 1px solid var(--second-color);
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .menu__mobile a {
+    text-decoration: none;
+    color: var(--font-primary-color);
+  }
+
+  .btn__closed__menu {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .btn__closed__menu img {
+    width: 20px;
+  }
+
+  #start__container #greeting__text {
+    font-size: 1rem;
+  }
+
+  #animation__area {
+    font-size: 1.3rem;
+  }
+
+  #about__me__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+}
